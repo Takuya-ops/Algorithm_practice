@@ -17,9 +17,8 @@ list_b = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
 for i in range(len(list_b)):
     min_idx = i
-    for j in range(i+1, len(list_b)):
-        if list_b[min_idx] > list_b[j]:
-            list_b[min_idx], list_b[j] = list_b[j], list_b[min_idx]
-            min_index = j
-
+    for j in range(min_idx+1, len(list_b)):
+        if list_b[min_idx] < list_b[j]:
+            list_b[i], list_b[j] = list_b[j], list_b[i]
+            min_idx = j
 print(list_b)
