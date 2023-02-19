@@ -19,7 +19,3 @@ class Solution:
                 queue.append(current.right)
 
         return root
-
-
-a = Solution()
-print(a.invertTree(root1))
