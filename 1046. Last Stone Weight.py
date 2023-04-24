@@ -18,7 +18,7 @@ class Solution:
                 # その差をリストに加える。
                 stones.append(stone1 - stone2)
 
-        リストに残った最後の要素を返す
+        # リストに残った最後の要素を返す
         return stones[0] if stones else 0
 
 
