@@ -3,6 +3,8 @@ from typing import List
 
 # 関数の定義：
 
+# 関数の定義（int型のリストを与える→ソート後のリスト）
+
 
 def selection_sort(numbers: List[int]) -> List[int]:
     # インデックス番号の取り出し
