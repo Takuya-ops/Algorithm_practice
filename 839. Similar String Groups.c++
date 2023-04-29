@@ -1,6 +1,7 @@
 class Solution
 {
 public:
+  // 関数の作成（深さ優先探索）
   void dfs(int node, vector<vector<int>> &adj, vector<bool> &visit)
   {
     visit[node] = true;
