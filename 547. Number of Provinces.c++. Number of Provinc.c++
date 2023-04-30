@@ -6,7 +6,7 @@ public:
         visit[node] = true;
         for (int i = 0; i < isConnected.size(); i++)
         {
-            if (isConnected[node][i] && !visit[i])
+                if (isConnected[node][i] && !visit[i])
             {
                 dfs(i, isConnected, visit);
             }
