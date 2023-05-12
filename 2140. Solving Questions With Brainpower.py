@@ -18,3 +18,8 @@ class Solution:
 
             dp[i] = max(dp[i], dp[i + 1])
         return dp[0]
+
+
+if __name__ == "__main__":
+    questions = [[3, 2], [4, 3], [4, 4], [2, 5]]
+    print(Solution().mostPoints(questions))
