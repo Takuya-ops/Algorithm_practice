@@ -22,8 +22,6 @@ def caesar_cipher(text: str, shift: int) -> str:
 def caesar_cipher_hack(text: str) -> Generator[Tuple[int: str], None, None]:
     # アルファベットの長さを取得する（stringモジュールが使えない場合）
     len_alphabet = ord("Z") - ord("A") + 1
-    # アルファベットの長さを取得する（stringモジュールが使える場合）
-    # len_alphabet = len(string.ascii_uppercase
     for candidate_shift in range(1, len_alphabet + 1):
         reverted = ""
         for char in text:
