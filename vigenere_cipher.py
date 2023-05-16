@@ -64,6 +64,7 @@ if __name__ == "__main__":
     # 元の文字列と同じ長さのキー（文字列）を作成
     k = generate_key(t, "BECKY")
     # print(generate_key("OPERATION STRIX", "BECKY"))
+    # print(encrypt("ABCDXYZ", "MORNING"))
     # 作成したキーを使って暗号化する
     e = encrypt(t, k)
     print("暗号化した文字列：" + e)
