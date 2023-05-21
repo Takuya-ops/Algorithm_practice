@@ -58,6 +58,7 @@ if __name__ == "__main__":
   even = EvenIterator(50)
   print(next(even))
   print(next(even))
+  print(next(even))
   
 # ジェネレータはイテレーターの一種
 # ジェネレーターは関数で定義する（yieldを使う）
