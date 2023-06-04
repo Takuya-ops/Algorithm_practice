@@ -73,6 +73,36 @@ class DoublyLinkedList(object):
             current_node = None
             return
 
+    def reverse_iterative(self) -> None:
+        previous_node = None
+        current_node = None
+        current_node = self.head
+        while current_node:
+            previous_node = current_node.prev
+            current_node.prev = current_node.next
+            current_node.next = previous_node
+
+            current_node = current_node.prev
+
+        if previous_node:
+            self.head = previous_node.prev
+
+    def reverse_recursive(self) -> None:
+        def _reverse_recursive(current_node: Node) -> Optional[Node]:
+            if not current_node:
+                return None
+
+            previous_node = current_node.prev
+            current_node.prev = current_node.next
+            current_node.next = previous_node
+
+            if current_node.prev is None:
+                return current_node
+
+            return _reverse_recursive(current_node.prev)
+
+        self.head = _reverse_recursive(self.head)
+
 
 if __name__ == "__main__":
     d = DoublyLinkedList()
@@ -87,7 +117,11 @@ if __name__ == "__main__":
     # print(d.head.next.next.data)
     # print(d.head.next.next.prev.data)
     # print(d.head.next.next.prev.prev.data)
-    print("########### Remove")
+    print("########### Reverse Iter")
     # d.remove(0)
-    d.remove(2)
+    # d.remove(2)
+    d.reverse_iterative()
+    d.print()
+    print("########### Reverse Rec")
+    d.reverse_recursive()
     d.print()
