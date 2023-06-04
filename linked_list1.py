@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Any
+from typing import Any, Optional
 
 
 class Node(object):
@@ -77,12 +77,38 @@ class LinkedList(object):
 
         self.head = _reverse_recursive(self.head, None)
 
+    def reverse_even(self) -> None:
+        def _reverse_even(head: Node, previous_node: Node) -> Optional[Node]:
+            if head is None:
+                return None
+
+            current_node = head
+            while current_node and current_node.data % 2 == 0:
+                next_node = current_node.next
+                current_node.next = previous_node
+                previous_node = current_node
+                current_node = next_node
+
+            if current_node != head:
+                head.next = current_node
+                _reverse_even(current_node, None)
+                return previous_node
+            else:
+                head.next = _reverse_even(head.next, head)
+                return head
+
+        self.head = _reverse_even(self.head, None)
+
 
 if __name__ == "__main__":
     l = LinkedList()
     l.append(1)
     l.append(2)
     l.append(3)
+    l.append(2)
+    l.append(4)
+    l.append(6)
+    l.append(8)
     l.insert(0)
     l.print()
     # l.remove(2)
@@ -91,4 +117,7 @@ if __name__ == "__main__":
     l.print()
     print("############# Reverse Rec")
     l.reverse_recursive()
+    l.print()
+    print("############# Reverse even")
+    l.reverse_even()
     l.print()
