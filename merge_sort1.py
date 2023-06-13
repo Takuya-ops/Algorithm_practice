@@ -2,9 +2,10 @@ from typing import List
 
 
 def merge_sort(numbers: List[int]) -> List[int]:
+    # リストの要素が１個のとき
     if len(numbers) <= 1:
         return numbers
-
+    # 中心の位置で区切る
     center = len(numbers) // 2
     left = numbers[:center]
     right = numbers[center:]
