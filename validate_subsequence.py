@@ -14,6 +14,7 @@ def isValidSubsequence(array, sequence):
     return seqIdx == len(sequence)
 
 
+# テスト
 if __name__ == "__main__":
     array = [5, 1, 22, 25, 6, -1, 8, 10]
     sequence = [22, 25, 6]
