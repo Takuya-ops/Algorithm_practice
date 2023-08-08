@@ -12,18 +12,12 @@ def tournamentWinner(competitions, results):
     return max(dict, key=dict.get)
 
 
+# テスト
 if __name__ == "__main__":
     competitions = [
         ["HTML", "Java"],
         ["Java", "Python"],
         ["Python", "HTML"],
-        ["C#", "Python"],
-        ["Java", "C#"],
-        ["C#", "HTML"],
-        ["SQL", "C#"],
-        ["HTML", "SQL"],
-        ["SQL", "Python"],
-        ["SQL", "Java"],
     ]
-    results = [0, 1, 1, 1, 0, 1, 0, 1, 1, 0]
+    results = [0, 1, 1]
     print(tournamentWinner(competitions, results))
