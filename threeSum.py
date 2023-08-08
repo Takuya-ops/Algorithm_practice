@@ -43,6 +43,6 @@ def twoSum(array, i, res, targetSum):
 
 
 if __name__ == "__main__":
-    array = ([12, 3, 1, 2, -6, 5, 0, -8, -1],)
+    array = [12, 3, 1, 2, -6, 5, 0, -8, -1]
     targetSum = 0
-    threeNumberSum(array, targetSum)
+    print(threeNumberSum(array, targetSum))
