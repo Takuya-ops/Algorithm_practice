@@ -15,6 +15,7 @@ def missingNumbers(nums):
     return missing
 
 
+# テスト
 if __name__ == "__main__":
     nums = [1, 3]
     print(missingNumbers(nums))
