@@ -9,3 +9,5 @@ def getPermutations(array):
                 yield [element] + sub_perm
 
     return list(helper(array))
+
+def getPer
