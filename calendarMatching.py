@@ -15,7 +15,7 @@ def calendarMatching(calendar1, dailyBounds1, calendar2, dailyBounds2, meetingDu
     return overlapFreeTime
 
 
-# ２つのカレンダーの空き時間を比較する関数
+# ２つのカレンダーの空き時間を比較する関数。
 def getCalendarOverlap(freeTimeCalendar1, freeTimeCalendar2, meetingDuration):
     timeOverlap = []
     for time1 in freeTimeCalendar1:
