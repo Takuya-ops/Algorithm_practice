@@ -15,10 +15,9 @@ class Solution:
         return transposed
 
 
-# Creating an instance of the Solution class
+# テスト
 solution = Solution()
 
-# Testing the method with the provided examples
 matrix1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 output1 = solution.transpose(matrix1)
 print("転置後の行列：" + str(output1))
