@@ -17,8 +17,8 @@ class Solution:
 # 例を使ってテスト
 sol = Solution()
 example1 = [["London", "New York"], ["New York", "Lima"], ["Lima", "Sao Paulo"]]
-example2 = [["B", "C"], ["D", "B"], ["C", "A"]]
-example3 = [["A", "Z"]]
+example2 = [["B", "C"], ["D", "B"], ["C", "A"]] // A
+example3 = [["A", "Z"]] // Z
 
 output1 = sol.destCity(example1)
 output2 = sol.destCity(example2)
