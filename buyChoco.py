@@ -24,7 +24,7 @@ class Solution2:
             for j in range(i + 1, len(prices)):
                 total_cost = prices[i] + prices[j]
                 if total_cost <= haveMoney:
-                    min_cost = total_cost
+                    min_cost = min(min_const, total_cost)
         if min_cost != float("inf"):
             return haveMoney - min_cost
         else:
