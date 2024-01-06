@@ -57,5 +57,5 @@ class Solution:
 
 # Testing the function with a problematic string
 sol = Solution()
-test_str = "mgntdygtxrvxjnwksqhxuxtrv"
+test_str = "mgntdygtxrvxjnwksqhxuxtrvz"
 print(sol.maxLengthBetweenEqualCharacters(test_str))
