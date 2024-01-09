@@ -23,9 +23,9 @@ class Solution:
         return total_beams
 
 
-# Create an instance of the Solution class
+# インスタンスの作成
 sol = Solution()
 
 # Example cases
-print(sol.numberOfBeams(["011001", "000000", "010100", "001000"]))  # Expected output: 8
-print(sol.numberOfBeams(["000", "111", "000"]))  # Expected output: 0
+print(sol.numberOfBeams(["011001", "000000", "010100", "001000"]))  # 期待される値: 8
+print(sol.numberOfBeams(["000", "111", "000"]))  # 期待される値: 0
