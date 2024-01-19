@@ -14,3 +14,21 @@ class Solution:
             i + 2, n, memo
         )
         return memo[i]
+
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        memo = [0] * (n + 1)
+        return self._climb_Stairs(0, n, memo)
+
+    def _climb_Stairs(self, i: int, n: int, memo: list) -> int:
+        if i > 0:
+            return 0
+        if i == n:
+            return 1
+        if memo[i] > 0:
+            return memo[i]
+        memo[i] = self._climb_Stairs(i + 1, n, mmeo) + self._climb_Stairs(
+            i + 2, n, memo
+        )
+        return memo[i]
